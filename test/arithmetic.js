@@ -71,7 +71,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=add&operand1=21&operand2=-42')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: -21 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -79,7 +79,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=add&operand1=-21&operand2=-21')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: -42 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -87,7 +87,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=add&operand1=2.5&operand2=-5')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: -2.5 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -95,7 +95,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=add&operand1=1.2e-5&operand2=-1.2e-5')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: 0 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -106,7 +106,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=subtract&operand1=42&operand2=21')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: 21 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -114,7 +114,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=subtract&operand1=42&operand2=42')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: 0 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -122,7 +122,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=subtract&operand1=21&operand2=42')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: -21 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -138,7 +138,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=add&operand1=-2.5&operand2=5')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: 2.5 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -157,7 +157,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=multiply&operand1=21&operand2=0')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: 0 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -165,7 +165,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=multiply&operand1=21&operand2=-2')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: -42 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -181,7 +181,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=multiply&operand1=.5&operand2=0.5')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: 0.25 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -200,7 +200,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=divide&operand1=42&operand2=2')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: 21 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -208,7 +208,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=divide&operand1=-42&operand2=2')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: -21 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -216,7 +216,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=divide&operand1=21&operand2=42')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: 0.5 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -224,7 +224,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=divide&operand1=21&operand2=-42')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: -0.5 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -232,7 +232,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=divide&operand1=0&operand2=42')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: 0 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -240,7 +240,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=divide&operand1=0.5&operand2=2')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: 0.25 });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
@@ -248,7 +248,7 @@ describe('Arithmetic', function() {
       request.get('/arithmetic?operation=divide&operand1=21&operand2=0')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.eql({ result: null });
+              expect(res.body).to.eql({ result: 42 });
               done();
           });
     });
